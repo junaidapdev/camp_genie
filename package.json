@@ -3,6 +3,7 @@
     "connect-mongo": "^3.2.0",
     "cucumber": "^7.0.0-rc.0",
     "ejs": "^3.1.6",
+    "ejs-mate": "^3.0.0",
     "express": "^4.17.2",
     "method-override": "^3.0.0",
     "mongoose": "^6.1.5"
