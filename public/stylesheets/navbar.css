@@ -1,0 +1,41 @@
+.navbar-dark .navbar-nav .fontcolor-change {
+    margin-left: 10px;
+    /* color: #fff; */
+}
+
+.navbar-nav .light-bg {
+   border-radius: 5px;
+   /* color: white; */
+}
+.bg-navbar{
+    color: rgb(240, 240, 240);
+    background-color: white
+}
+
+.navbar{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(36, 37, 41, 0.37);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    position: fixed;
+    z-index: 2;
+}
+
+.navbar-dark .navbar-brand {
+    color: #03045E;
+}
+
+.collapse .navbar-nav .nav-link{
+    color: #03045E;
+}
+.btn-light a{
+    background-color: #03045E;
+    width: .5rem;
+    
+}

@@ -1,7 +1,9 @@
-<nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
+<link rel="stylesheet" href="/stylesheets/navbar.css">
+
+<nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-navbar">
   <div class="container-fluid">
 
-      <a class="navbar-brand" href="#">CampGenie</a>
+      <a class="navbar-brand" href="#">CampGenie🔥</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -16,9 +18,13 @@
         <div class="navbar-nav ms-auto">
           <% if(!currentUser) {%>
           <a class="nav-link" href="/login">Login</a>
-          <a class="nav-link" href="/register">Register</a>
+          <a class="nav-link light-bg fontcolor-change" href="/register">Register</a>
           <% } else {%>
-          <a class="nav-link" href="/logout">Logout</a>
+
+          <a class="nav-link" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1)"><path d="M12 2C6.579 2 2 6.579 2 12s4.579 10 10 10 10-4.579 10-10S17.421 2 12 2zm0 5c1.727 0 3 1.272 3 3s-1.273 3-3 3c-1.726 0-3-1.272-3-3s1.274-3 3-3zm-5.106 9.772c.897-1.32 2.393-2.2 4.106-2.2h2c1.714 0 3.209.88 4.106 2.2C15.828 18.14 14.015 19 12 19s-3.828-.86-5.106-2.228z"></path></svg>
+            <%= currentUser.username %></a>
+      
+          <a class="nav-link btn btn-light fontcolor-change" href="/logout">Sign Out</a>
           <% } %>
         </div>
 
