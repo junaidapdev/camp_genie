@@ -44,3 +44,9 @@ p{
     width: 200px;
     align-items: left;
 }
+
+.btn-primary{
+    color:#03045E ;
+    background: linear-gradient(to right, #36d1dc, #5b86e5);
+    -webkit-background-clip: text;
+}
