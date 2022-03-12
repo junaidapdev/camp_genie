@@ -1,21 +1,32 @@
+
 .jumbotron {
   background-color: #cc9544;
   margin-top: 6rem;
-
+  margin-bottom: 1rem;
   background: rgba(255, 255, 255, 0.4);
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.2);
   position: relative;
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
+  border: 1px solid;
   
 }
 
+
+.navbar-brand{
+    font-family: 'Fredoka', sans-serif;
+    color: #03045E;
+}
 body {
   font-family: "Montserrat", sans-serif;
+  background: #fff;
   /* background-color: #1C0A00; */
-  background: linear-gradient(to right, #36d1dc, #5b86e5);
-  -webkit-background-clip: text;
+  /* background: linear-gradient(to right, #36d1dc, #5b86e5);
+  -webkit-background-clip: text; */
+  /* background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(24,24,142,1) 35%, rgba(0,212,255,1) 100%);
+-webkit-background-clip: text; */
 }
 
 .card{
@@ -25,6 +36,8 @@ body {
     position: relative;
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
+    width: 100%;
+    border: 1px solid;
 }
 
 .img-fluid{
@@ -49,4 +62,7 @@ p{
     color:#03045E ;
     background: linear-gradient(to right, #36d1dc, #5b86e5);
     -webkit-background-clip: text;
+}
+
+.map{
 }

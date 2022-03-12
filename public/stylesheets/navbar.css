@@ -31,6 +31,10 @@
     color: #03045E;
 }
 
+.navbar-dark .navbar-brand:hover {
+    color: #03045E;
+}
+
 .collapse .navbar-nav .nav-link{
     color: #03045E;
 }
@@ -38,6 +42,12 @@
     background-color: #03045E;
     width: .5rem;
     
+}
+
+button.navbar-toggler{
+    color: #03045E;
+    background-color: #03045E;
+
 }
 
 
