@@ -15,7 +15,7 @@ const LocalStrategy = require('passport-local');
 const User = require('./models/user');
 
 // const MongoDBStore = require('connect-mongo');
-const MongoDBStore = require('connect-mongo')(session);
+const MongoStore = require('connect-mongo')(session);
 
 
 const userRoutes = require('./routes/users');
@@ -25,6 +25,8 @@ const reviews = require('./routes/reviews');
 // const dbUrl = process.env.DB_URL;
 
 const dbUrl = process.env.DB_URL || 'mongodb://localhost:27017/campgenie';
+
+// const dbUrl = 'mongodb://localhost:27017/campgenie';
 
 
 mongoose.connect(dbUrl);
@@ -57,13 +59,14 @@ app.locals.moment = require('moment');
 
 const secret = process.env.SECRET || 'thisshouldbesecret'
 
-const store = new MongoDBStore ({
+const store = new MongoStore ({
     url: dbUrl,
     secret,
     touchAfter: 24 * 60 * 60
 });
 
-store.on("error", function(e){
+
+store.on('error', function(e) {
     console.log('SESSION STORE ERROR', e);
 })
 
