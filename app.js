@@ -2,7 +2,6 @@ if (process.env.NODE_ENV !== "production") {
     require('dotenv').config();
 }
 
-
 const express = require('express');
 const path = require('path');
 const mongoose = require('mongoose');
@@ -15,12 +14,22 @@ const passport = require('passport');
 const LocalStrategy = require('passport-local');
 const User = require('./models/user');
 
+// const MongoDBStore = require('connect-mongo');
+const MongoDBStore = require('connect-mongo')(session);
+
 
 const userRoutes = require('./routes/users');
 const campgrounds = require('./routes/campgrounds');
 const reviews = require('./routes/reviews');
 
-mongoose.connect('mongodb://localhost:27017/campgenie');
+// const dbUrl = process.env.DB_URL;
+
+const dbUrl = process.env.DB_URL || 'mongodb://localhost:27017/campgenie';
+
+
+mongoose.connect(dbUrl);
+
+// mongoose.connect(dbUrl);
 
 const db = mongoose.connection;
 db.on("error", console.error.bind(console, "connection error:"));
@@ -46,8 +55,21 @@ app.use(express.static(path.join(__dirname, 'public')))
 //require moment
 app.locals.moment = require('moment');
 
+const secret = process.env.SECRET || 'thisshouldbesecret'
+
+const store = new MongoDBStore ({
+    url: dbUrl,
+    secret,
+    touchAfter: 24 * 60 * 60
+});
+
+store.on("error", function(e){
+    console.log('SESSION STORE ERROR', e);
+})
+
 const sessionConfig = {
-    secret: 'thisshouldbeabettersecret!',
+    store: store,
+    secret,
     resave: false,
     saveUninitialized: true,
     cookie: {
