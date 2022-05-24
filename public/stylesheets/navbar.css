@@ -26,6 +26,7 @@
     position: fixed;
     z-index: 2;
 }
+ 
 
 .navbar-dark .navbar-brand {
     color: #03045E;
@@ -37,6 +38,10 @@
 
 .collapse .navbar-nav .nav-link{
     color: #03045E;
+}
+
+.collapse .navbar-nav .nav-link:hover {
+    color: #1012a0;
 }
 .btn-light a{
     background-color: #03045E;
