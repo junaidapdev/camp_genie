@@ -74,3 +74,17 @@ h5{
     font-family: 'Fredoka', sans-serif;
     color: #03045E;
 }
+
+@media screen and (max-width: 480px) {
+    h1{
+        font-size: 1.5rem;
+    }
+
+    h3{
+        font-size: 1.2rem;
+    }
+
+    p{
+        font-size: 1rem;
+    }
+}
